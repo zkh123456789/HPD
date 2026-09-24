@@ -1,22 +1,18 @@
 # general settings
-name: test_HPD_x3
+name: HPD_x3
 model_type: SRModel
 scale: 3
-num_gpu: 1  # set num_gpu: 0 for cpu mode
+num_gpu: 1  
 manual_seed: 0
 
 datasets:
   test: 
-    name: Set5
+    name: UCMerced
     type: PairedImageDataset
-    dataroot_gt: /media/witai4090/data3/zkh/FreMamba-main/MixDataset-x3/test/A/GT
-    dataroot_lq: /media/witai4090/data3/zkh/FreMamba-main/MixDataset-x3/test/A/LR
+    dataroot_gt: ~
+    dataroot_lq: ~
     io_backend:
       type: disk
-
-
-
-
 
 
 # network structures
@@ -40,14 +36,14 @@ path:
 # validation settings
 val:
   save_img: true
-  suffix: ~  # add suffix to saved images, if None, use exp name
+  suffix: ~  
 
   metrics:
-    psnr: # metric name, can be arbitrary
+    psnr: 
       type: calculate_psnr
       crop_border: 4
       test_y_channel: true
-      better: higher  # the higher, the better. Default: higher
+      better: higher 
     ssim:
       type: calculate_ssim
       crop_border: 4
