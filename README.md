@@ -1,3 +1,7 @@
+
+## Code for paper Hierarchical Progressive Distillation for Image Super-Resolution of Remote Sensing
+
+
 ## Environment
 
 - [PyTorch >= 1.7](https://pytorch.org/) **(Recommend >= 1.11)**
@@ -19,7 +23,6 @@ python basicsr/train.py -opt /media/witai4090/data3/zkh/HPD-master/options/train
 ## How To Test
 
 python basicsr/test.py -opt /media/witai4090/data3/zkh/HPD-master/options/test/HPD/test_HPD_x4.yml
-
 
 
 
