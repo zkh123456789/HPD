@@ -29,6 +29,14 @@ python basicsr/train.py -opt /media/witai4090/data3/zkh/HPD-master/options/train
 python basicsr/test.py -opt /media/witai4090/data3/zkh/HPD-master/options/test/HPD/test_HPD_x4.yml
 
 
+## Acknowledgements
+
+```
+Our code is based on LKFN([https://github.com/XPixelGroup/BasicSR](https://github.com/ThediidehT/LKFN)) and BasicSR(https://github.com/XPixelGroup/BasicSR).
+We thank them for their outstanding work and contributions.
+
+```
+
 
 
 
