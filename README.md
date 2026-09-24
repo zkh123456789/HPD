@@ -32,10 +32,10 @@ python basicsr/test.py -opt /media/witai4090/data3/zkh/HPD-master/options/test/H
 ## Acknowledgements
 
 
-Our code is based on 
-- [LKFN]([https://github.com/XPixelGroup/BasicSR](https://github.com/ThediidehT/LKFN)) 
+- Our code is based on 
+- [LKFN](https://github.com/ThediidehT/LKFN)
 - [BasicSR](https://github.com/XPixelGroup/BasicSR)
-We thank them for their outstanding work and contributions.
+- We thank them for their outstanding work and contributions.
 
 
 
