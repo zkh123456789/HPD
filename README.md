@@ -2,9 +2,6 @@
 ## Code for paper Hierarchical Progressive Distillation for Image Super-Resolution of Remote Sensing
 
 
-```
-Hierarchical Progressive Distillation for Image Super-Resolution of Remote Sensing
-```
 
 ## Environment
 
