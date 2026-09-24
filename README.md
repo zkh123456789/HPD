@@ -2,6 +2,10 @@
 ## Code for paper Hierarchical Progressive Distillation for Image Super-Resolution of Remote Sensing
 
 
+```
+Hierarchical Progressive Distillation for Image Super-Resolution of Remote Sensing
+```
+
 ## Environment
 
 - [PyTorch >= 1.7](https://pytorch.org/) **(Recommend >= 1.11)**
