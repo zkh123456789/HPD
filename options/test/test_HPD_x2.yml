@@ -9,8 +9,8 @@ datasets:
   test: 
     name: UCMerced
     type: PairedImageDataset
-    dataroot_gt: /media/witai4090/data3/zkh/FreqFormer-main/datasets/UCMerced/test/GT
-    dataroot_lq: /media/witai4090/data3/zkh/FreqFormer-main/datasets/UCMerced/test/x2
+    dataroot_gt: ~
+    dataroot_lq: ~
     io_backend:
       type: disk
 
@@ -37,14 +37,14 @@ path:
 # validation settings
 val:
   save_img: true
-  suffix: ~  # add suffix to saved images, if None, use exp name
+  suffix: ~  
 
   metrics:
-    psnr: # metric name, can be arbitrary
+    psnr: 
       type: calculate_psnr
       crop_border: 2
       test_y_channel: true
-      better: higher  # the higher, the better. Default: higher
+      better: higher  
     ssim:
       type: calculate_ssim
       crop_border: 2
