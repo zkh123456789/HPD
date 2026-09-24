@@ -5,7 +5,7 @@ from basicsr.utils.registry import ARCH_REGISTRY
 from basicsr.archs.arch_util import default_init_weights
 import math
 import time
-from thop import profile  # 需要安装: pip install thop
+from thop import profile  
 
 class BSConvU(nn.Module):
     def __init__(self, in_channels, out_channels, kernel_size=3, stride=1, padding=1, dilation=1, bias=True, padding_mode="zeros"):
@@ -442,7 +442,7 @@ class HPDB(nn.Module):
         return out + x
 
 class UpsampleOneStep(nn.Module):
-    """上采样模块"""
+
     def __init__(self, in_channels, out_channels, upscale_factor=4):
         super().__init__()
         conv = nn.Conv2d(in_channels, out_channels * (upscale_factor**2), 3, 1, 1)
@@ -453,7 +453,7 @@ class UpsampleOneStep(nn.Module):
         return self.upsample(x)
 
 class Upsampler_rep(nn.Module):
-    """重参数化上采样器"""
+
     def __init__(self, in_channels, out_channels, upscale_factor=4):
         super().__init__()
         self.conv1 = nn.Conv2d(in_channels, out_channels * (upscale_factor**2), 1)
