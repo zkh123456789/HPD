@@ -1,0 +1,52 @@
+# general settings
+name: test_HPD_x4
+model_type: SRModel
+scale: 4
+num_gpu: 1  # set num_gpu: 0 for cpu mode
+manual_seed: 42
+
+datasets:
+  test: 
+    name: RSSCN7
+    type: PairedImageDataset
+    dataroot_gt: /media/witai4090/data3/zkh/FreqFormer-main/datasets/UCMerced/test/GT
+    dataroot_lq: /media/witai4090/data3/zkh/FreqFormer-main/datasets/UCMerced/test/x4
+    io_backend:
+      type: disk
+
+
+
+# network structures
+network_g:
+  type: HPD
+  num_in_ch: 3
+  num_out_ch: 3
+  num_feat: 56
+  num_atten: 56
+  num_block: 8
+  upscale: 4
+  num_in: 4
+  upsampler: pixelshuffledirect
+
+# path
+path:
+  pretrain_network_g: ~
+  param_key_g: params_ema
+  strict_load_g: false
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+      better: higher  # the higher, the better. Default: higher
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true
+      better: higher
